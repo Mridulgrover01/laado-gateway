@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laado ❤️</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- AUDIO -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/music/bg-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="unlock-sound" preload="auto">
+        <source src="assets/sounds/unlock.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="click-sound" preload="auto">
+        <source src="assets/sounds/click.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="gift-sound" preload="auto">
+        <source src="assets/sounds/gift-open.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- MUSIC BUTTON -->
+    <button id="music-toggle" class="music-toggle">
+        🎵
+    </button>
+
+    <!-- LOGIN SCREEN -->
+    <section id="login-screen" class="screen active">
+
+        <div class="login-container">
+
+            <h1 class="login-title">
+                Welcome back, Laado ❤️
+            </h1>
+
+            <div class="input-group">
+
+                <input
+                    type="text"
+                    value="Laado"
+                    disabled
+                    class="input username"
+                />
+
+            </div>
+
+            <div class="input-group">
+
+                <input
+                    type="password"
+                    id="password"
+                    class="input password"
+                    placeholder="Our Secret"
+                />
+
+            </div>
+
+            <p class="password-hint">
+                Your favorite idiot… and your special day ✨
+            </p>
+
+            <button id="login-btn" class="login-btn">
+                Enter Our World
+            </button>
+
+            <div id="login-error" class="error-message hidden">
+                Someone forgot the most special memory 👀
+            </div>
+
+            <div id="login-success" class="success-message hidden">
+                I knew you'd remember ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ACCESS SCREEN -->
+    <section id="access-screen" class="screen">
+
+        <div class="access-container">
+
+            <h2 class="access-title">
+                Access Granted
+            </h2>
+
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+
+            <p class="access-subtitle">
+                Preparing your surprise...
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SLIDESHOW -->
+    <section id="slideshow-screen" class="screen">
+
+        <div class="slideshow-container">
+
+            <div class="slideshow-image active">
+                <img src="assets/photos/photo1.png" alt="">
+            </div>
+
+            <div class="slideshow-image">
+                <img src="assets/photos/photo2.png" alt="">
+            </div>
+
+            <div class="slideshow-image">
+                <img src="assets/photos/photo3.png" alt="">
+            </div>
+
+            <div class="slideshow-image">
+                <img src="assets/photos/photo4.png" alt="">
+            </div>
+
+            <div class="slideshow-image">
+                <img src="assets/photos/photo5.png" alt="">
+            </div>
+
+            <div class="slideshow-caption">
+                <span id="caption-text"></span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GIFT SCREEN -->
+    <section id="gift-screen" class="screen">
+
+        <div class="gift-container">
+
+            <div class="gift-wrapper">
+
+                <div id="gift-box" class="gift-box closed">
+
+                    <div class="gift-top"></div>
+
+                    <div class="gift-body">
+                        <div class="gift-ribbon"></div>
+                    </div>
+
+                    <div class="gift-shadow"></div>
+
+                </div>
+
+                <p id="tap-text" class="gift-instruction">
+                    Tap to Open ❤️
+                </p>
+
+            </div>
+
+            <!-- CONTENT -->
+            <div id="gift-content" class="gift-content hidden">
+
+                <div class="wish-card">
+
+                    <p>No matter how far you are…</p>
+
+                    <p class="wish-highlight">
+                        this day was always yours ❤️
+                    </p>
+
+                </div>
+
+                <!-- QR -->
+                <div class="qr-wrapper">
+
+                    <p class="qr-text">
+                        Scan To Unlock Your Real Surprise ❤️
+                    </p>
+
+                    <img
+                        src="assets/photos/qr-code.png"
+                        alt="QR Code"
+                        class="qr-code"
+                    />
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
