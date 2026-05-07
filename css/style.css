@@ -431,46 +431,80 @@ body{
    GIFT
 ========================= */
 
+/* =========================
+   GIFT SCREEN FINAL
+========================= */
+
 .gift-container{
+
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
     display:flex;
-    flex-direction:column;
 
     align-items:center;
     justify-content:center;
 
-    padding:24px;
+    flex-direction:column;
 
-    z-index:10;
+    overflow:hidden;
+
+    padding:1rem;
+
 }
+
+/* =========================
+   GIFT WRAPPER
+========================= */
 
 .gift-wrapper{
+
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:1rem;
+
 }
 
+/* =========================
+   GIFT BOX
+========================= */
+
 .gift-box{
+
     position:relative;
 
     width:180px;
-    height:200px;
+    height:180px;
 
     cursor:pointer;
 
     animation:
-    floatGift 3s ease-in-out infinite;
+    giftFloat 3s ease-in-out infinite;
+
 }
 
-@keyframes floatGift{
+@keyframes giftFloat{
+
     0%,100%{
         transform:translateY(0);
     }
+
     50%{
         transform:translateY(-10px);
     }
+
 }
 
 .gift-top{
+
     position:absolute;
 
     top:0;
@@ -485,42 +519,56 @@ body{
     linear-gradient(
     135deg,
     #ff4fd8,
-    #ff008c
+    #8f00ff
     );
+
+    box-shadow:
+    0 0 30px rgba(255,0,200,.5);
 
     z-index:3;
 
-    transition:.7s ease;
+    transition:1s ease;
+
 }
 
 .gift-box.opening .gift-top{
+
     transform:
-    translateY(-90px)
-    rotate(15deg);
+    translateY(-85px)
+    rotate(12deg);
+
 }
 
 .gift-body{
+
     position:absolute;
 
     bottom:0;
 
     width:100%;
-    height:160px;
+    height:145px;
 
-    border-radius:0 0 24px 24px;
+    border-radius:0 0 25px 25px;
 
     background:
     linear-gradient(
     135deg,
-    #320032,
-    #180018
+    #450045,
+    #1a001f
     );
 
     border:
-    2px solid rgba(255,255,255,0.08);
+    2px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+    box-shadow:
+    0 0 50px rgba(255,0,200,.18);
+
 }
 
 .gift-ribbon{
+
     position:absolute;
 
     top:0;
@@ -528,18 +576,20 @@ body{
 
     transform:translateX(-50%);
 
-    width:28px;
+    width:35px;
     height:100%;
 
     background:
     linear-gradient(
     180deg,
     #ffd700,
-    #ffb700
+    #ffb300
     );
+
 }
 
 .gift-shadow{
+
     position:absolute;
 
     bottom:-20px;
@@ -548,24 +598,34 @@ body{
     transform:translateX(-50%);
 
     width:140px;
-    height:20px;
+    height:25px;
 
     border-radius:50%;
 
     background:
-    rgba(0,0,0,0.4);
+    rgba(0,0,0,.5);
 
-    filter:blur(12px);
+    filter:blur(15px);
+
 }
 
+/* =========================
+   TAP TEXT
+========================= */
+
 .gift-instruction{
+
     margin-top:1.5rem;
 
     font-size:
     clamp(1rem,4vw,1.4rem);
 
     color:
-    rgba(255,255,255,0.85);
+    rgba(255,255,255,.9);
+
+    text-shadow:
+    0 0 15px rgba(255,0,200,.4);
+
 }
 
 /* =========================
@@ -573,126 +633,162 @@ body{
 ========================= */
 
 .gift-content{
+
     display:none;
 
     flex-direction:column;
 
     align-items:center;
 
-    gap:2rem;
+    justify-content:center;
 
-    margin-top:2rem;
+    gap:1.5rem;
 
     opacity:0;
 
-    transform:translateY(20px);
+    transform:translateY(30px);
 
-    transition:.7s ease;
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
 }
 
 .gift-content.show{
+
     display:flex;
 
     opacity:1;
 
     transform:translateY(0);
+
 }
 
+/* =========================
+   WISH CARD
+========================= */
+
 .wish-card{
-    width:min(420px,90vw);
 
-    padding:2rem;
+    width:min(520px,90vw);
 
-    border-radius:28px;
+    padding:2rem 2rem;
+
+    border-radius:30px;
 
     text-align:center;
 
     background:
-    rgba(255,255,255,0.06);
+    rgba(20,10,35,.7);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(25px);
 
     border:
-    1px solid rgba(255,255,255,0.08);
+    1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 40px rgba(255,0,200,.12);
+
 }
 
 .wish-card p{
+
     line-height:1.7;
-    font-size:1.15rem;
+
+    font-size:
+    clamp(1.05rem,3vw,1.45rem);
+
+    color:#fff;
+
 }
 
 .wish-highlight{
-    margin-top:.6rem;
 
-    font-size:1.35rem;
+    margin-top:.7rem;
 
     font-weight:700;
 
     background:
     linear-gradient(
     135deg,
-    #fff,
-    #ff89e7
+    #ffffff,
+    #ff7be5
     );
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+
 }
 
 /* =========================
-   QR
+   QR SECTION
 ========================= */
 
 .qr-wrapper{
+
     display:flex;
+
     flex-direction:column;
 
     align-items:center;
 
-    gap:1.2rem;
+    gap:1rem;
+
 }
 
 .qr-text{
+
     text-align:center;
 
     font-size:
-    clamp(1rem,3vw,1.2rem);
+    clamp(1rem,3vw,1.3rem);
 
     color:
-    rgba(255,255,255,0.9);
+    rgba(255,255,255,.92);
+
+    text-shadow:
+    0 0 15px rgba(255,0,200,.25);
+
 }
 
 .qr-code{
 
-    width:min(250px,75vw);
+    width:min(240px,65vw);
 
-    border-radius:28px;
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:24px;
 
     padding:12px;
 
     background:
-    rgba(255,255,255,0.08);
+    rgba(255,255,255,.08);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(25px);
 
     border:
-    1px solid rgba(255,255,255,0.08);
+    1px solid rgba(255,255,255,.08);
 
     box-shadow:
-    0 10px 40px
-    rgba(255,0,140,.25);
+    0 0 45px rgba(255,0,200,.22);
 
     animation:
     qrFloat 3s ease-in-out infinite;
+
 }
 
 @keyframes qrFloat{
+
     0%,100%{
         transform:translateY(0);
     }
+
     50%{
         transform:translateY(-8px);
     }
+
 }
 
 /* =========================
@@ -701,25 +797,39 @@ body{
 
 @media(max-width:768px){
 
-    .login-container{
-        padding:18px;
-    }
-
     .gift-box{
+
         width:150px;
-        height:170px;
+        height:150px;
+
     }
 
     .gift-body{
-        height:135px;
+
+        height:120px;
+
+    }
+
+    .wish-card{
+
+        padding:1.4rem;
+
+        border-radius:22px;
+
     }
 
     .qr-code{
-        width:70vw;
+
+        width:56vw;
+
+        max-width:210px;
+
     }
 
-    .slideshow-image img{
-        object-fit:contain;
+    .gift-content{
+
+        gap:1.2rem;
+
     }
 
 }
