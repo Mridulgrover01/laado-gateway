@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
     <title>Laado ❤️</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    />
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
     />
+
 </head>
 
 <body>
@@ -18,29 +29,50 @@
     <canvas id="particles-canvas"></canvas>
 
     <!-- AUDIO -->
+
     <audio id="bg-music" loop preload="auto">
-        <source src="assets/music/bg-music.mp3" type="audio/mpeg">
+        <source
+            src="assets/music/bg-music.mp3"
+            type="audio/mpeg"
+        >
     </audio>
 
     <audio id="unlock-sound" preload="auto">
-        <source src="assets/sounds/unlock.mp3" type="audio/mpeg">
+        <source
+            src="assets/sounds/unlock.mp3"
+            type="audio/mpeg"
+        >
     </audio>
 
     <audio id="click-sound" preload="auto">
-        <source src="assets/sounds/click.mp3" type="audio/mpeg">
+        <source
+            src="assets/sounds/click.mp3"
+            type="audio/mpeg"
+        >
     </audio>
 
     <audio id="gift-sound" preload="auto">
-        <source src="assets/sounds/gift-open.mp3" type="audio/mpeg">
+        <source
+            src="assets/sounds/gift-open.mp3"
+            type="audio/mpeg"
+        >
     </audio>
 
     <!-- MUSIC BUTTON -->
-    <button id="music-toggle" class="music-toggle">
+
+    <button
+        id="music-toggle"
+        class="music-toggle"
+    >
         🎵
     </button>
 
     <!-- LOGIN SCREEN -->
-    <section id="login-screen" class="screen active">
+
+    <section
+        id="login-screen"
+        class="screen active"
+    >
 
         <div class="login-container">
 
@@ -74,15 +106,24 @@
                 Your favorite idiot… and your special day ✨
             </p>
 
-            <button id="login-btn" class="login-btn">
+            <button
+                id="login-btn"
+                class="login-btn"
+            >
                 Enter Our World
             </button>
 
-            <div id="login-error" class="error-message hidden">
+            <div
+                id="login-error"
+                class="error-message hidden"
+            >
                 Someone forgot the most special memory 👀
             </div>
 
-            <div id="login-success" class="success-message hidden">
+            <div
+                id="login-success"
+                class="success-message hidden"
+            >
                 I knew you'd remember ❤️
             </div>
 
@@ -91,7 +132,11 @@
     </section>
 
     <!-- ACCESS SCREEN -->
-    <section id="access-screen" class="screen">
+
+    <section
+        id="access-screen"
+        class="screen"
+    >
 
         <div class="access-container">
 
@@ -112,7 +157,11 @@
     </section>
 
     <!-- SLIDESHOW -->
-    <section id="slideshow-screen" class="screen">
+
+    <section
+        id="slideshow-screen"
+        class="screen"
+    >
 
         <div class="slideshow-container">
 
@@ -145,13 +194,22 @@
     </section>
 
     <!-- GIFT SCREEN -->
-    <section id="gift-screen" class="screen">
+
+    <section
+        id="gift-screen"
+        class="screen"
+    >
 
         <div class="gift-container">
 
+            <!-- GIFT -->
+
             <div class="gift-wrapper">
 
-                <div id="gift-box" class="gift-box closed">
+                <div
+                    id="gift-box"
+                    class="gift-box closed"
+                >
 
                     <div class="gift-top"></div>
 
@@ -163,37 +221,55 @@
 
                 </div>
 
-                <p id="tap-text" class="gift-instruction">
+                <p
+                    id="tap-text"
+                    class="gift-instruction"
+                >
                     Tap to Open ❤️
                 </p>
 
             </div>
 
-            <!-- CONTENT -->
-            <div id="gift-content" class="gift-content hidden">
+            <!-- GIFT CONTENT -->
+
+            <div
+                id="gift-content"
+                class="gift-content hidden"
+            >
 
                 <div class="wish-card">
 
-                    <p>No matter how far you are…</p>
+                    <p>
+                        No matter how far you are…
+                    </p>
 
                     <p class="wish-highlight">
                         this day was always yours ❤️
                     </p>
 
-                </div>
+                    <!-- QR SECTION -->
 
-                <!-- QR -->
-                <div class="qr-wrapper">
+                    <div class="qr-wrapper">
 
-                    <p class="qr-text">
-                        Scan To Unlock Your Real Surprise ❤️
-                    </p>
+                        <p class="qr-text">
+                            Scan To Unlock Your Real Surprise ❤️
+                        </p>
 
-                    <img
-                        src="assets/photos/qr-code.png"
-                        alt="QR Code"
-                        class="qr-code"
-                    />
+                        <img
+                            src="assets/photos/qr-code.png"
+                            alt="QR Code"
+                            class="qr-code"
+                        />
+
+                        <a
+                            href="https://laado-birthdayy.netlify.app/"
+                            target="_blank"
+                            class="surprise-link"
+                        >
+                            Open Surprise Directly ✨
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -206,4 +282,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
